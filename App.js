@@ -1,20 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-
+import CalculadoraScreen from './screens/CalculadoraScreen';
+import { Layout } from './components';
+import { Button } from 'react-native-web';
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+   <Layout title="Contacto" >
+ <Button
+  title="Enviar"
+  color="rgba(66, 214, 12, 0.7)"
+  onPress={() => alert('Mensaje enviado ✅')}
+  accessibilityLabel="Enviar formulario de contacto"
+/>
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+</Layout>
+  );
+};
+
+
+
